@@ -20,7 +20,6 @@ body{
 
 body .container{
     width: 100%;
-    background-color: red;
     height: 100%;
     position: fixed;
     
@@ -55,8 +54,6 @@ h2{
     font-style: italic;
 }
 
-
-
 /*NAVBAR*/
 #header{
     width: 100%;
@@ -65,7 +62,6 @@ h2{
     float: left;
     position: fixed;
     z-index: 7;
-
 }
 #header #logo 
 {

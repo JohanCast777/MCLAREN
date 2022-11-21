@@ -1,0 +1,13 @@
+#proteccion de directorios
+
+Options All -Indexes
+
+#proteccion de datos no encontrados o permisos
+
+ErrorDocument 403 /MCLAREN/no_encontrado.html
+ErrorDocument 404 /MCLAREN/sin_permisoss.html
+
+
+
+
+
