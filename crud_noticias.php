@@ -12,9 +12,9 @@ $todos=$tra->trae_noticias_s();
 	<title>Crud Noticias</title>
 </head>
 <body>
-	<table width="98%" align="center" border="1">
+	<table width="98%" align="center" border="1" >
 		<thead>
-			<tr bgcolor="#BAE9EC">
+			<tr>
 					<th><a href="primero.php">
 						<a href="login.php"><img src="images\comeback.png" alt="Come back" class="comeback"></a>
 					</th>
@@ -22,11 +22,11 @@ $todos=$tra->trae_noticias_s();
 					<th><a href="primero.php">
 						<img src="images\guardar-el-archivo.png" alt="Guardar Datos" title="Guardar Datos" class="imagenn"></a>
 					</th>
-				<tr bgcolor="#C3E5F3">
+				<tr> 
 					<th colspan="6">Listado General de Noticias del Dia</th>
 				</tr>
 			</tr>
-			<tr bgcolor="#C9DAF7">
+			<tr>
 				<th>Id Noti</th><th>Titulo Not</th><th>Det. Noti</th><th>Fecha Autor</th><th>Descarga Not</th><th>Actividad</th>
 			</tr>
 		</thead>
@@ -51,8 +51,8 @@ $todos=$tra->trae_noticias_s();
 	              			$v4=$todos[$i]["fecha_cadena"];
 	              			$v5=$todos[$i]["descarg_not"];
 	              			$nvapal=$tra->corta_palabras($v3,80);
-	              			$varia=($cant%2)==0 ? '<tr style="background-color: #C8F6F8" color="#9de5ec" font-weigth:bold' :
-	              			'<tr style="background-color:#BEF2CD" color="#9de5ec" font-weigth:bold';
+	              			$varia=($cant%2)==0 ? '<tr style= color="#9de5ec" font-weigth:bold' :
+	              			'<tr style= color="#9de5ec" font-weigth:bold';
 	              			$cant++;
 	              			?>
 							<tr>
@@ -63,9 +63,9 @@ $todos=$tra->trae_noticias_s();
 	              				<th><?php echo $v4;?></th>
 	              				<th><?php echo $v5;?></th>
 	              				<th>
-	              					<a href="./clases/edicion_reg.php?cod=<?php echo $v1;?>">
+	              					<a href="edit.php?cod=<?php echo $v1;?>">
 	              						<img src="images\editar.png" alt="Editar Registros" title="Edicion de Registros" width="25" height="25">||</a>
-	              					<a href="./clases/Eliminar_reg.php?cod=<?php echo $v1;?>">
+	              					<a href="delete.php?cod=<?php echo $v1;?>">
 	              						<img src="images\basura.png" alt="Eliminar Registros" title="Eliminacion de Registros" width="25" height="25"> </a>		
 	              				</th>
 	              			</tr>

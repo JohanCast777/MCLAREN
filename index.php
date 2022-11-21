@@ -29,7 +29,7 @@
               </svg></a>
                 <ul>
                     <li><a href="crud_noticias.php">ADD</a></li>
-                    <li><a href="verifica_ident.php">VERIFY</a></li>
+                    <li><a href="upload_img.php">VERIFY</a></li>
                 </ul>
             </li>
             <li><a href="crud_noticias.php"class="a">NEWS</a></li>

@@ -24,7 +24,7 @@
 		</div>
         <ul class="nav">
             <li><a href="index2.php"class="a">HOME</a></li>
-            <li><a  class="a">NOTICIA &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+            <li><a  class="a">TOOLS &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
               </svg></a>
                 <ul>
@@ -43,20 +43,22 @@
             </li>
         </ul>
     </nav>
+
     <!--SLIDER-->
-    <div class="container">
+<div class="container">
          <!-- Slider main container -->
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide"><h2>Hola this is a test</h2><img src="images\imagen1.jpg" alt="imagen1"></div>
+                <div class="swiper-slide"><h2>Jupiter drivers looking to learn more about the aspects and features of the McLaren model line should explore our handy McLaren brochures below. 
+                </h2><img src="images\imagen1.jpg" alt="imagen1"></div>
                 <div class="swiper-slide"><h2>Hola this is a test</h2><img src="images\imagen2.jpg" alt="imagen2"></div>
                 <div class="swiper-slide"><h2>Hola this is a test</h2><img src="images\imagen3.jpg" alt="imagen3"></div>
                 <div class="swiper-slide"><h2>Hola this is a test</h2><img src="images\grey.jpg" alt="imagen4"></div>
             </div>
                 <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+                <!--<div class="swiper-pagination"></div>-->
   
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
@@ -64,7 +66,9 @@
             </div>
         </div>
         
-    </div>    
+    </div>
+    
+
 <!--------------------------------IMPORTACION PAGINA EXTERNA PARA ESTILO DE SLIDER------------------------------>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
@@ -72,8 +76,9 @@
         // Optional parameters
         direction: 'horizontal',
         autoplay:{
-            delay:3000, 
+            delay:6000, 
             disableOnInteraction:false,
+            transition:2000,
 
         },
         loop: true,

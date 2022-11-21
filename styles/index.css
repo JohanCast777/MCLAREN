@@ -8,8 +8,8 @@
 }
 body{
     width: 100%;
-    background-image: url(https://images.hdqwalls.com/wallpapers/mclaren-p1-xp7-4k-car-ut.jpg);
-    background-repeat: no-repeat;
+    background-image: url(https://i.pinimg.com/originals/71/07/dd/7107dd1d9fe3f4e7b98f38424c356a9c.jpg);
+    background-repeat: no-repeat;  
     background-attachment: fixed;
     background-size: cover;
     height: auto;
@@ -122,7 +122,7 @@ ul li .a:hover::before
     width: 30%;
     height: 100%;
     float: left;
-    margin-left: 200px;
+    margin-left:260px ; /*200px*/
     position:absolute;
     
 }

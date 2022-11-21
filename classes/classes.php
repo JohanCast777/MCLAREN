@@ -90,6 +90,28 @@ class Trabajo extends Conexion
 		return $resultado;
 	}
 
+	public function eliminar_noti($b3){
+		$val="";
+		$sql="delete from noticias_dia where id_noticia=:iden";
+		$consulta=$this->conexion->prepare($sql);
+		$consulta->BindValue(":iden",$b3);				
+		$resultado=$consulta->execute();
+		return $resultado;
+	}
+
+	public function editar_noticia($b1,$b2,$b3){
+		$val="";
+		$sql="update noticias_dia set tiutlo_not=:titu, detalle_not=:detall where id_noticia=:id";
+		$consulta=$this->conexion->prepare($sql);
+
+		$consulta->BindValue(": id",$b1);
+		$consulta->BindValue(":titu",$b2);
+		$consulta->BindValue(":detall",$b3);				
+		$resultado=$consulta->execute();
+		return $resultado;
+	}
+
+
 }
 
  ?>
