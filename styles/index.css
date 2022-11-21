@@ -1,0 +1,163 @@
+
+/*Inicion*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    background-image: url(https://images.hdqwalls.com/wallpapers/mclaren-p1-xp7-4k-car-ut.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    position: absolute;
+}
+
+/*NAVBAR*/
+#header{
+    width: 100%;
+    height: 85px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header #logo 
+{
+	width: 250px;
+	height: 100%;
+	float: left;
+	margin-left: 50px;
+    margin-right: 300px;
+    position: relative;
+
+}
+
+#logo .img3{
+    margin-top: 0px;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+.nav li a{
+    color: white;
+    text-decoration: none;
+    padding: 20px   60px  ;
+    display: block;
+    z-index: 3;
+    transition:  background-color .10s;
+    transition:  transform .3s;
+}
+
+.nav li .a::before{
+    display: block;
+	content: '';
+	width: 0;
+	background:rgb(218, 18, 18);
+	height: 5px;
+	top: 0;
+	position: relative;
+	transition: 0.5s;
+    
+}
+
+ul li .a:hover::before
+{
+	width: 100%;
+}
+
+.nav > li{
+    float: left;   
+}
+
+.nav li > ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    transition: all .10s;
+}
+.nav li > ul a{
+    padding-left: 50px;
+}
+.nav li:hover > ul{
+    display: block;
+}
+
+
+.nav li ul li{
+    position: relative;
+    transition: all .4s;
+    z-index: 2;
+}
+
+.nav li ul li:hover{
+    transform: scale(0.9);
+
+}
+
+/*NEWS*/
+
+.news{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.container{
+    margin-top: 72px;
+    height: 245px;
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+
+.container .text{
+    background-color: white;
+    opacity: .7;
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin-left: 200px;
+    position:absolute;
+    
+}
+.container:hover{
+    transform: scale(1.1);
+}
+
+.container .image{
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    margin-right: 125px;
+    float: right
+}
+
+
+.text h1{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-style: italic;
+}
+
+.text p{
+    font-size: 15px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-style: italic;
+    text-align: center;
+
+}
+.image img{
+    width: 100%;
+    height: 100%;
+
+}
