@@ -55,10 +55,10 @@
                     $imagen=$tra1[$i]["descarg_not"];
         ?>        
                     <div class="container">
-                       <div class="text"><h1><?php echo $titulo; ?></h1><p><?php echo $c_noticia; ?></p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Agregar comentario</a></div>                
+                       <div class="text"><h1><?php echo $titulo; ?></h1><p><?php echo $c_noticia; ?></p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="btn-abrir-popup" class="btn-abrir-popup" style="cursor:pointer;">Add Comentary</a></div>                
                        <style>
                             .text a{
-                                color:red;
+                                color:rgb(165, 33, 33);
                                 text-decoration:none;                                
                             }
                        </style>
@@ -67,7 +67,48 @@
                 <?php
                 }
                 ?>
+                <!--Popup window-->
+		<div class="overlay" id="overlay">
+			<div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"><img src="icons\cerca.png" class="exit" alt="exit"></i></a>
+                <style>
+                    .exit{
+                        height: 10px;
+                        width: 10px;
+                    }
+                    .exit:hover{
+                        transform: scale(1.2);
+                    }
+                </style>
+				<h3>SUSCRIBETE</h3>
+				<h4>y recibe un cupon de descuento.</h4>
+				<form action="">
+					<div class="contenedor-inputs">
+						<input type="text" placeholder="Name">
+						<input type="email" placeholder="Email">
+					</div>
+					<input type="submit" class="btn-submit" value="Submit">
+				</form>
+			</div>
+		</div>
 
     </div>
 </body>
+    <script>
+        var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
+	overlay = document.getElementById('overlay'),
+	popup = document.getElementById('popup'),
+	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
+
+btnAbrirPopup.addEventListener('click', function(){
+	overlay.classList.add('active');
+	popup.classList.add('active');
+});
+
+btnCerrarPopup.addEventListener('click', function(e){
+	e.preventDefault();
+	overlay.classList.remove('active');
+	popup.classList.remove('active');
+});
+    </script>
 </html>

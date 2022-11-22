@@ -98,7 +98,7 @@ ul{
     display: block;
 	content: '';
 	width: 0;
-	background:rgb(218, 18, 18);
+	background:rgb(165, 33, 33);;
 	height: 5px;
 	top: 0;
 	position: relative;
