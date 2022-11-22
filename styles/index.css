@@ -112,6 +112,7 @@ ul li .a:hover::before
     height: 245px;
     width: 50%;
     float: left;
+    padding-bottom: 20px;
     position: relative;
 }
 

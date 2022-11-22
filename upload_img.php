@@ -1,7 +1,6 @@
 <?php
-require_once("classes\classes.php");
-
-$id_noti=$_POST["id_noti"];
+require_once("class.php");
+$id_noti=$_POST["id_noticia"];
 $nombre=$_FILES['imagen']['name'];
 $tipo=$_FILES['imagen']['type'];
 $tamano=$_FILES['imagen']['size'];

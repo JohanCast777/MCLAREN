@@ -111,6 +111,17 @@ class Trabajo extends Conexion
 		return $resultado;
 	}
 
+	public function sube_img($id_noti,$nombre)
+	{
+		$sql="update noticias_dia set imagen_not='$nombre' where id_noticias='$id_noti'";
+
+		$result=$this->conexion->query($sql);
+		echo "<script type='text/javascrit'>
+			alert('Imagen Adicionada Correctamente....');
+			window.location='sube_imagenes.php';
+		</script>";
+		
+	}
 
 }
 

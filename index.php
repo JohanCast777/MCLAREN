@@ -55,7 +55,13 @@
                     $imagen=$tra1[$i]["descarg_not"];
         ?>        
                     <div class="container">
-                        <div class="text"><h1><?php echo $titulo; ?></h1><p><?php echo $c_noticia; ?></p></div>                
+                       <div class="text"><h1><?php echo $titulo; ?></h1><p><?php echo $c_noticia; ?></p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Agregar comentario</a></div>                
+                       <style>
+                            .text a{
+                                color:red;
+                                text-decoration:none;                                
+                            }
+                       </style>
                         <div class="image"><img src="<?php echo $imagen;?>" alt="primeraimg"></div>
                     </div>            					
                 <?php
