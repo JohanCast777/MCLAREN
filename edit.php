@@ -61,22 +61,6 @@ if(isset($_GET["noticias_dia"]))
 				<th colspan="2"><input type="text" name="detall" class="control" value="<?php echo $b2; ?>"></th>
 			</tr>
 		</thead>
-		<!--
-<div class="registro">
-
- 		<form action="" method="post">
-		 <p><br>ID NOTICIA :<input type="text" class="control" name="id" id="nombre" placeholder="Id"></br>
-			 <label for="identidad"></label>
-	 		<br>TITULO NOT :<input type="password" class="control" name="titu" placeholder="Titulo not"></br>
-			 <label for="num_doc"></label>
-	 	<label for="num_doc"></label>
-         <br>DETALLE NOT : <input type="text" name="detall" class="control" placeholder="Detalle not"></br>
-        
-        <input type="submit" name="enviar"value="GUARDAR">
-	 	<input type="hidden" name="noticia" value="si" >           
- 		</form>
- 	</div>
- 	</p>-->
  </body>
  </html>
  

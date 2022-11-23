@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles\index.css">
     <link rel="shortcut icon" href="icons\dd.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <title>Mclaren</title>
@@ -24,12 +25,13 @@
 		</div>
         <ul class="nav">
             <li><a href="index2.php"class="a">HOME</a></li>
-            <li><a  class="a">TOOLS &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+            <li><a  class="a">CRUDS TOOLS  &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
               </svg></a>
                 <ul>
-                    <li><a href="crud_noticias.php">ADD</a></li>
-                    <li><a href="upload_img.php">VERIFY</a></li>
+                    <li><a href="crud_noticias.php">EDIT NEWS</a></li>
+                    <li><a href="crud_users.php">EDIT USERS</a></li>
+                    <li><a href="upload_img.php">ADD PICTURE</a></li>
                 </ul>
             </li>
             <li><a href="crud_noticias.php"class="a">NEWS</a></li>
@@ -80,12 +82,14 @@
                         transform: scale(1.2);
                     }
                 </style>
-				<h3>SUSCRIBETE</h3>
-				<h4>y recibe un cupon de descuento.</h4>
+				<h3>Comments</h3>
+				<h4>Whrite your comment here!</h4>
 				<form action="">
 					<div class="contenedor-inputs">
 						<input type="text" placeholder="Name">
 						<input type="email" placeholder="Email">
+                        <input type="text" placeholder="Web_user">
+                        <input type="text" id="comment" placeholder="Comment">
 					</div>
 					<input type="submit" class="btn-submit" value="Submit">
 				</form>

@@ -27,11 +27,6 @@ if(isset($_POST["usuario"]))
         }
 
     </script>
-    
-
-
-    
-
 </head>
 
 <body>

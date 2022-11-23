@@ -24,12 +24,13 @@
 		</div>
         <ul class="nav">
             <li><a href="index2.php"class="a">HOME</a></li>
-            <li><a  class="a">TOOLS &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+            <li><a  class="a">CRUDS TOOLS &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
               </svg></a>
                 <ul>
-                    <li><a href="adicion_usu.php">ADD</a></li>
-                    <li><a href="verifica_ident.php">VERIFY</a></li>
+                    <li><a href="crud_noticias.php">EDIT NEWS</a></li>
+                    <li><a href="upload_img.php">EDIT USERS</a></li>
+                    <li><a href="upload_img.php">ADD PICTURE</a></li>
                 </ul>
             </li>
             <li><a href="index.php"class="a">NEWS</a></li>

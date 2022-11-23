@@ -126,6 +126,8 @@ ul li .a:hover::before
     position:absolute;
     
 }
+
+
 /*.container:hover{
     transform: scale(1.1);
 }*/
@@ -260,6 +262,7 @@ ul li .a:hover::before
 .popup form .contenedor-inputs {
 	opacity: 0;
 }
+
 
 .popup form .contenedor-inputs input {
 	width: 100%;
