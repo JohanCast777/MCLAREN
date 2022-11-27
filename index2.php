@@ -29,8 +29,8 @@
               </svg></a>
                 <ul>
                     <li><a href="crud_noticias.php">EDIT NEWS</a></li>
-                    <li><a href="upload_img.php">EDIT USERS</a></li>
-                    <li><a href="upload_img.php">ADD PICTURE</a></li>
+                    <li><a href="#">EDIT USERS</a></li>
+                    <li><a href="Upload-pictures.php">ADD PICTURE</a></li>
                 </ul>
             </li>
             <li><a href="index.php"class="a">NEWS</a></li>
@@ -39,7 +39,7 @@
               </svg></a>
                 <ul>
                     <li><a href="login.php">LOGIN</a></li>
-                    <li><a href="registrarse.php">REGISTER</a></li>
+                    <li><a href="singnup.php">REGISTER</a></li>
                 </ul>
             </li>
         </ul>

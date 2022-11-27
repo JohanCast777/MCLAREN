@@ -1,7 +1,15 @@
 <?php 
-    include("classes\classes.php");
+    require_once("classes\classes.php");
     $tra=new Trabajo();
-    $todos=$tra->trae_noticias_s();
+    if(isset($_GET["noticias_dia"]))
+    {
+        $b1=$_POST["cod"];
+        $b2=$_POST["titulo_not"];
+        $b3=$_POST["detalle_not"];
+        //$b4=$_POST["ids_tipo"];
+        $val=$tra->editar_noticia($b1,$b2,$b3);
+    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +26,7 @@
     <body>
                 <div class="container mt-5">
                     <form action="update.php" method="POST">                    
-                                <input type="hidden" name="cod_estudiante" value="<?php echo $row['cod_estudiante']  ?>">                                
+                                <input type="hidden" name="cod_estudiante" value="<?php echo $row['cod_estudiante'] ?>">                                
                                 <input type="text" class="form-control mb-3" name="dni" placeholder="Dni" value="<?php echo $row['dni']  ?>">
                                 <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres" value="<?php echo $row['nombres']  ?>">
                                 <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="<?php echo $row['apellidos']  ?>">                                

@@ -1,13 +1,13 @@
 <?php
 require_once("classes\classes.php");
 $tra=new Trabajo();
-if(isset($_GET["noticias_dia"]))
+if(isset($_POST["noticia"]))
 {
-	$b1=$_POST["cod"];
-	$b2=$_POST["titulo_not"];
-	$b3=$_POST["detalle_not"];
+	$b1=$_POST["id"];
+	$b2=$_POST["titu"];
+	$b3=$_POST["detall"];
 	//$b4=$_POST["ids_tipo"];
-	$val=$tra->editar_noticia($b1,$b2,$b3);
+	$val=$tra->actualizar_noticia($b1,$b2,$b3);
 }
 
  ?>
@@ -39,15 +39,17 @@ if(isset($_GET["noticias_dia"]))
 	padding:5px 150px;
  }
 </style>
-<table width="98%" align="center" border="1" >
+<form action="" method="post">
+    <table width="98%" align="center" border="1" >
 		<thead>
 			<tr>
-					<th><a href="primero.php">
-						<a href="login.php"><img src="images\comeback.png" alt="Come back" class="comeback"></a>
+					<th>
+						<a href="crud_noticias.php"><img src="images\comeback.png" alt="Come back" class="comeback"></a>
 					</th>
 					<th colspan="4">ACTUALIZACIÓN DE CAMPOS NOTICIA</th>
-					<th><a href="primero.php">
-						<img src="images\guardar-el-archivo.png" alt="Guardar Datos" title="Guardar Datos" class="imagenn"></a>
+					<th>						
+						<input type="submit" name="enviar"value="GUARDAR">
+	 					<input type="hidden" name="noticia" value="si" >
 					</th>
 			<tr> 
 			<tr>
@@ -56,11 +58,12 @@ if(isset($_GET["noticias_dia"]))
 				<th colspan="2">Descripción Noticia</th>
 			</tr>
 			<tr>
-				<th colspan="2"><input type="text" class="control" name="id" id="nombre" value="<?php echo $b1;?>"></th>
-				<th colspan="2"><input type="text" class="control" name="titu" value="<?php echo $b2; ?>"></th>
-				<th colspan="2"><input type="text" name="detall" class="control" value="<?php echo $b2; ?>"></th>
+				<th colspan="2"><input type="text" class="control" name="id" id="nombre" placeholder="Id noticia" ></th>          <!--value="<?php/* echo $b1;*/?>"-->
+				<th colspan="2"><input type="text" class="control" name="titu" placeholder="Titulo Noticia"></th>
+				<th colspan="2"><input type="text" name="detall" class="control" placeholder="Descripciòn Noticia"></th>
 			</tr>
-		</thead>
+	</thead>
+</form>	
  </body>
  </html>
  

@@ -67,7 +67,6 @@ class Trabajo extends Conexion
 	public function traer_usu($nom,$pass)
 	{
 		$sql="select * from usuarios_sist where login_usu='$nom' and pass_usu='$pass'";
-		
 		$consult=$this->conexion->prepare($sql);
 		$consult->execute();
 		$result=$consult->fetchAll(PDO::FETCH_ASSOC);
@@ -99,29 +98,26 @@ class Trabajo extends Conexion
 		return $resultado;
 	}
 
-	public function editar_noticia($b1,$b2,$b3){
+	public function actualizar_noticia($b1,$b2,$b3){
 		$val="";
-		$sql="update noticias_dia set tiutlo_not=:titu, detalle_not=:detall where id_noticia=:id";
+		$sql="update noticias_dia set titulo_not=:titu, detalle_not=:detall where id_noticia=:id";
 		$consulta=$this->conexion->prepare($sql);
-
-		$consulta->BindValue(": id",$b1);
+		$consulta->BindValue(":id",$b1);
 		$consulta->BindValue(":titu",$b2);
 		$consulta->BindValue(":detall",$b3);				
 		$resultado=$consulta->execute();
 		return $resultado;
 	}
 
-	public function sube_img($id_noti,$nombre)
-	{
-		$sql="update noticias_dia set imagen_not='$nombre' where id_noticias='$id_noti'";
-
+	public function sube_img($id_noti,$nombre){
+		$sql="update noticias_dia set descarg_not='$nombre' where id_noticia='$id_noti'";
 		$result=$this->conexion->query($sql);
 		echo "<script type='text/javascrit'>
 			alert('Imagen Adicionada Correctamente....');
 			window.location='sube_imagenes.php';
-		</script>";
-		
+		</script>";		
 	}
+
 
 }
 

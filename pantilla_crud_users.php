@@ -87,7 +87,8 @@
 										<th><?php echo $v4;?></th>
 										<th><?php echo $v5;?></th>
 										<th>
-											<a href="Update-users.php?id=<?php echo $row['id_noticia'] ?>" class="btn btn-info">Editar</a>                                  
+											<!--<a href="Update-users.php?id=<?/*php echo $row['id_noticia'] */?>" class="btn btn-info">Editar</a>-->
+											<a href="Update-users.php?cod=<?php echo $v1;?>" class="btn btn-info">Editar</a>
 										</th>
 										<th>
 											<a href="delete.php?id=<?php echo $row['id_noticia'] ?>" class="btn btn-danger">Eliminar</a>
