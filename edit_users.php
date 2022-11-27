@@ -4,10 +4,10 @@ $tra=new Trabajo();
 if(isset($_POST["noticia"]))
 {
 	$b1=$_POST["id"];
-	$b2=$_POST["titu"];
-	$b3=$_POST["detall"];
+	$b2=$_POST["log"];
+	$b3=$_POST["pass"];
 	//$b4=$_POST["ids_tipo"];
-	$val=$tra->actualizar_noticia($b1,$b2,$b3);
+	$val=$tra->actualizar_usuario($b1,$b2,$b3);
 }
 
  ?>
@@ -17,7 +17,7 @@ if(isset($_POST["noticia"]))
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
  	<link rel="stylesheet" href="../estilos/estiloactualizar.css">
- 	<title>UPDATE NOTICE</title>
+ 	<title>UPDATE USERS</title>
  </head>
  <body>
 <div class="titulo">
@@ -44,7 +44,7 @@ if(isset($_POST["noticia"]))
 		<thead>
 			<tr>
 					<th>
-						<a href="crud_noticias.php"><img src="images\comeback.png" alt="Come back" class="comeback"></a>
+						<a href="crud_users.php"><img src="images\comeback.png" alt="Come back" class="comeback"></a>
 					</th>
 					<th colspan="4"><h2>FIELDS UPDATE NOTICE</h2></th>
 					<th>						
@@ -54,13 +54,13 @@ if(isset($_POST["noticia"]))
 			<tr> 
 			<tr>
 				<th colspan="2">ID Noticia</th>
-				<th colspan="2">Titulo Noticia</th>
-				<th colspan="2">Descripción Noticia</th>
+				<th colspan="2">Login user</th>
+				<th colspan="2">Password user</th>
 			</tr>
 			<tr>
 				<th colspan="2"><input type="text" class="control" name="id" id="nombre" placeholder="Id noticia" ></th>          <!--value="<?php/* echo $b1;*/?>"-->
-				<th colspan="2"><input type="text" class="control" name="titu" placeholder="Titulo Noticia"></th>
-				<th colspan="2"><input type="text" name="detall" class="control" placeholder="Descripciòn Noticia"></th>
+				<th colspan="2"><input type="text" class="control" name="log" placeholder="Login User"></th>
+				<th colspan="2"><input type="text" name="pass" class="control" placeholder="Password"></th>
 			</tr>
 	</thead>
 </form>	

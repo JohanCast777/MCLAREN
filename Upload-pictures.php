@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Sube las Imagenes al Sistema</title>
+	<title>UPLOAD PICTURES</title>
 </head>
 <body>
 	<center>

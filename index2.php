@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="icons\dd.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <title>Mclaren</title>
+    <title>MCLAREN</title>
 </head>
 <body>
 
@@ -29,7 +29,7 @@
               </svg></a>
                 <ul>
                     <li><a href="crud_noticias.php">EDIT NEWS</a></li>
-                    <li><a href="#">EDIT USERS</a></li>
+                    <li><a href="crud_users.php">EDIT USERS</a></li>
                     <li><a href="Upload-pictures.php">ADD PICTURE</a></li>
                 </ul>
             </li>

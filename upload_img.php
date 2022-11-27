@@ -1,13 +1,10 @@
 <?php
 require_once("classes\classes.php");
 $tra=new Trabajo();
-	$id_noti=$_POST["id_noticia"];
+	$id_noti=$_POST["id_noti"];
 	$nombre=$_FILES['imagen']['name'];
 	$tipo=$_FILES['imagen']['type'];
 	$tamano=$_FILES['imagen']['size'];
-
-
-
 echo "Tamaño del Archivo " . $_FILES['imagen']['size'] . " Bytes <br>";
 echo "Tipo de Archivo " . $_FILES['imagen']['type'] . "<br>";
 

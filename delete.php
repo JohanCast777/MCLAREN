@@ -14,7 +14,7 @@ if(isset($_POST["noticia"]))
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
  	<link rel="stylesheet" href="../estilos/estiloactualizar.css">
- 	<title>Eliminacion noticia </title>
+ 	<title>DELETE NEWS</title>
  </head>
  <body>
  

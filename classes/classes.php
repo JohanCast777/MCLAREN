@@ -43,6 +43,22 @@ class Trabajo extends Conexion
 		$result=$consult->fetchAll(PDO::FETCH_ASSOC);
 		return $result;
 	}
+	public function traer_user()
+	{
+		$sql="select * from usuarios_sist";
+		$consult=$this->conexion->prepare($sql);
+		$consult->execute();
+		$result=$consult->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	public function all_news($inic)
+	{
+		$sql="select * from usuarios_sist order by id_usuario asc limit $inic,10";
+		$consult=$this->conexion->prepare($sql);
+		$consult->execute();
+		$result=$consult->fetchAll(PDO::FETCH_ASSOC);
+		return $result;	
+	}
 
 	public function trae_noticias($inic,$c)
 	{
@@ -54,6 +70,8 @@ class Trabajo extends Conexion
 		$result=$consult->fetchAll(PDO::FETCH_ASSOC);
 		return $result;
 	}
+
+	
 
 	public function todas_not($inic)
 	{
@@ -109,6 +127,17 @@ class Trabajo extends Conexion
 		return $resultado;
 	}
 
+	public function actualizar_usuario($b1,$b2,$b3){
+		$val="";
+		$sql="update usuarios_sist set login_usu=:log, pass_usu=:pass where id_usuario=:id";
+		$consulta=$this->conexion->prepare($sql);
+		$consulta->BindValue(":id",$b1);
+		$consulta->BindValue(":log",$b2);
+		$consulta->BindValue(":pass",$b3);				
+		$resultado=$consulta->execute();
+		return $resultado;
+	}
+
 	public function sube_img($id_noti,$nombre){
 		$sql="update noticias_dia set descarg_not='$nombre' where id_noticia='$id_noti'";
 		$result=$this->conexion->query($sql);
@@ -116,6 +145,17 @@ class Trabajo extends Conexion
 			alert('Imagen Adicionada Correctamente....');
 			window.location='sube_imagenes.php';
 		</script>";		
+	}
+
+	public function actualizar_noticia($b1,$b2,$b3){
+		$val="";
+		$sql="update noticias_dia set titulo_not=:titu, detalle_not=:detall where id_noticia=:id";
+		$consulta=$this->conexion->prepare($sql);
+		$consulta->BindValue(":id",$b1);
+		$consulta->BindValue(":titu",$b2);
+		$consulta->BindValue(":detall",$b3);				
+		$resultado=$consulta->execute();
+		return $resultado;
 	}
 
 
