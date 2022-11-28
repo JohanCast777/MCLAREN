@@ -45,6 +45,7 @@
             </li>
         </ul>
     </nav>
+
 <!--NEWS-->
 
     <div class="news">
@@ -55,9 +56,10 @@
                     $titulo=$tra1[$i]["titulo_not"];
                     $c_noticia=$tra1[$i]["detalle_not"];
                     $imagen=$tra1[$i]["descarg_not"];
+                    $c=0;
         ?>        
                     <div class="container">
-                       <div class="text"><h1><?php echo $titulo; ?></h1><p><?php echo $c_noticia; ?></p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="btn-abrir-popup" class="btn-abrir-popup" style="cursor:pointer;">Add Comentary</a></div>                
+                       <div class="text"><h1><?php echo $titulo; ?></h1><p><?php echo $c_noticia; ?></p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id="btn-abrir-popup" class="btn-abrir-popup" style="cursor:pointer;">Add Comentary <?php echo $c; ?></a></div>        
                        <style>
                             .text a{
                                 color:rgb(165, 33, 33);
@@ -69,6 +71,32 @@
                 <?php
                 }
                 ?>
+
+<!--public function upload_comentari($b1,$b2,$b3,$b4){
+		$val="";
+		$fech=date('y-m-d');
+		$sql="insert into coment_not(nombre_lector, correo_lector, web_lector, texto_not, fecha_com) values(:name, :email, :web, :txt, :date)";
+		$consulta=$this->conexion->prepare($sql);
+		$consulta->BindValue(":name",$b1);
+		$consulta->BindValue(":email",$b2);
+		$consulta->BindValue(":web",$b3);				
+		$consulta->BindValue(":txt",$b4);
+		$consulta->BindValue(":date",$fech);
+		$resultado=$consulta->execute();
+		return $resultado;
+	}-->
+
+    <?php
+    if(isset($_POST["popup"]))
+{
+	$b1=$_POST["user"];
+	$b2=$_POST["email"];
+	$b3=$_POST["web"];
+    $b4=$_POST["text"];
+	$vall=$traa->upload_comentari($b1,$b2,$b3,$b4);	
+    $c=$c+1;
+}
+?>
                 <!--Popup window-->
 		<div class="overlay" id="overlay">
 			<div class="popup" id="popup">
@@ -86,12 +114,13 @@
 				<h4>Whrite your comment here!</h4>
 				<form action="">
 					<div class="contenedor-inputs">
-						<input type="text" placeholder="Name">
-						<input type="email" placeholder="Email">
-                        <input type="text" placeholder="Web_user">
-                        <input type="text" id="comment" placeholder="Comment">
+						<input type="text" placeholder="Name" name="user">
+						<input type="email" placeholder="Email" name="email">
+                        <input type="text" placeholder="Web_user" name="web">
+                        <input type="text" id="comment" placeholder="Comment" name="text">                       
 					</div>
-					<input type="submit" class="btn-submit" value="Submit">
+					<input type="submit" name="enviar"value="GUARDAR" class="btn-submit">
+	 				<input type="hidden" name="popup" value="si" >
 				</form>
 			</div>
 		</div>

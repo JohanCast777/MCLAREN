@@ -147,13 +147,16 @@ class Trabajo extends Conexion
 		</script>";		
 	}
 
-	public function actualizar_noticia($b1,$b2,$b3){
+	public function upload_comentari($b1,$b2,$b3,$b4, $b5){
 		$val="";
-		$sql="update noticias_dia set titulo_not=:titu, detalle_not=:detall where id_noticia=:id";
+		$fech=date('y-m-d');
+		$sql="insert into coment_not(nombre_lector, correo_lector, web_lector, texto_not, fecha_com) values(:name, :email, :web, :txt, :date)";
 		$consulta=$this->conexion->prepare($sql);
-		$consulta->BindValue(":id",$b1);
-		$consulta->BindValue(":titu",$b2);
-		$consulta->BindValue(":detall",$b3);				
+		$consulta->BindValue(":name",$b1);
+		$consulta->BindValue(":email",$b2);
+		$consulta->BindValue(":web",$b3);				
+		$consulta->BindValue(":txt",$b4);
+		$consulta->BindValue(":date",$fech);
 		$resultado=$consulta->execute();
 		return $resultado;
 	}
