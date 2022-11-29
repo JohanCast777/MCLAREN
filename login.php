@@ -13,7 +13,7 @@ if(isset($_POST["usuario_comp"]) and $_POST["usuario"]="si")
  		{
  			echo "<script type='text/javascript'>
 			alert('Bienvenido al sistema de Administracion ');
-			window.location='crud_noticias.php';
+			window.location='chose_crud.php';
 			</script>";
 		}else
 		{

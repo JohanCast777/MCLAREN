@@ -16,7 +16,7 @@ $todos=$tra->trae_noticias_s();
 		<thead>
 			<tr>
 					<th>
-						<a href="index2.php"><img src="images\comeback.png" alt="Come back" class="comeback"></a>
+						<a href="chose_crud.php"><img src="images\comeback.png" alt="Come back" class="comeback"></a>
 					</th>
 					<th colspan="4"><h1>GENERAL LIST OF NEWS OF THE DAY</h1></th>
 					<th><a href="primero.php">
