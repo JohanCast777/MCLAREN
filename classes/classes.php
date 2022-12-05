@@ -62,9 +62,7 @@ class Trabajo extends Conexion
 
 	public function trae_noticias($inic,$c)
 	{
-		$sql="select * from noticias_dia where id_ctegoria=$c order by id_noticias desc limit $inic,5";
-		//$sql="select * from noticias_dia order by id_noticias desc limit $inic,5";
-
+		$sql="select * from noticias_dia where id_categoria=$c order by id_noticia desc limit $inic,5";
 		$consult=$this->conexion->prepare($sql);
 		$consult->execute();
 		$result=$consult->fetchAll(PDO::FETCH_ASSOC);

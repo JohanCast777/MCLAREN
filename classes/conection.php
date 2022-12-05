@@ -4,7 +4,7 @@ class Conexion
 	private $host="localhost";
 	private $user="root";
 	private $pass="";
-	private $base="curso_tarde";
+	private $base="johan_c";
 	private $conectar="";
 
 	public function __construct()

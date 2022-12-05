@@ -2,12 +2,12 @@
     require_once("classes\classes.php");
     $tra=new Trabajo();
     /*-----------------------------*/
-    $tra2=$tra->traer_categorias();
+    $tra1=$tra->trae_noticias_s();
  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles\index.css">
@@ -49,30 +49,7 @@
 
 <!--NEWS-->
 
-    <div class="news">
-        <?php
-
-if (isset($_GET["pos"]))
-{
-    $inic=$_GET["pos"];
-    
-}else
-{
-    $inic=0;
-    
-}
-if (isset($_GET["cat"]))
-{
-    $c=$_GET["cat"];
-}else
-{
-    $c="1008";
-} 
-/*------BRING NEWS-------*/
-
-
-    $tra1=$tra->trae_noticias($inic,$c);
-    
+<?php    
 
             for($i=0;$i<count($tra1);$i++)
                 {				
@@ -94,7 +71,8 @@ if (isset($_GET["cat"]))
                     </div>            					
                 <?php
                 }
-                ?>                
+                ?>
+
 
     <?php
     if(isset($_POST["popup"]))
@@ -106,78 +84,19 @@ if (isset($_GET["cat"]))
 	$vall=$traa->upload_comentari($b1,$b2,$b3,$b4);	
     $c=$c+1;
 }
-?>
-
-<div id="der">
-		<div class="catego">
-			<div class="cat_tit">
-				<h2>Categories</h2>
-			</div>
-			<div class="categoria_1">
-				<?php 
-					for ($i=0;$i<sizeof($tra2);$i++)
-					{
-						$idcat=$tra2[$i]["id_categoria"];
-						$descat=$tra2[$i]["desc_categoria"];
-						?>
-						<div class="lenguaje">
-							<a href="?cat=<?php echo $idcat;?>"title="<?php echo $descat;?>"><?php echo $descat;?></a>
-                        </div>	 
-						<?php
-					}                                            
-				?>                                                                                        
-			</div>	
-            <a href="news.php"><h5>Come back</h5></a>	
-            
-            <style>
-                @import url('https://fonts.googleapis.com/css?family=Cairo');
-                #der{                                        
-                    opacity: .7;
-                    text-align:center;
-                    margin-top:590px;        
-                    background-color:black; 
-                    padding-bottom:53px;                               
-                }       
-                #der .cat_tit{
-                    background-color:rgb(190, 73, 5);
-
-                }
-                #der h2{
-                    color:black;
-                    margin-top:10px;
-                    text-shadow: 0.2em 0.2em 2.0 rgb(190, 73, 5);                 
-                    margin-bottom:40px;                    
-                }
-                #der .categoria_1{
-                    height: 100%;
-                    width:100%;
-                    background-color:white;
-                }
-
-                #der a{                                        
-                    text-decoration:none;
-	                display: inline-block;
-	                float: left;
-                    margin-left:230px;     
-                    color:gray;                        
-                    position:static;  
-                    /*background-image: url(https://4.bp.blogspot.com/-CmAIJ-iPNWY/UHp7Nmv6SBI/AAAAAAAAAzA/IqwKF-xU9MI/s1600/tumblr_ma9cglK9zD1qzt4vjo1_500.gif);
-                    background-size: cover;
-                    color: transparent;
-                    -moz-background-clip: text;
-                    -webkit-background-clip: text;
-                    text-transform: uppercase;                    */
-
-                }     
-                #der a:hover{  
-                    color:gray;                 
-                    text-shadow: 0.0em 0.0em 0.4em rgb(190, 73, 5);   
-                    position:static;  
-                    /*transform: scale(1.2);*/
-                }                  
-
-            </style>	
-		
+?>		
+<a href="index.php" id="aa">Choose Category</a>
+                <style>
+                    #aa{
+                        color:rgb(165, 33, 33);;
+                        text-decoration:none; 
+                        transition: all .2;                                           
+                    }
+                    #aa:hover{
+                        color:rgb(210, 18, 18);;
+                    }
+                                        
+                </style>
                 <!--Popup window-->
 		<div class="overlay" id="overlay">
 			<div class="popup" id="popup">
@@ -198,7 +117,7 @@ if (isset($_GET["cat"]))
 						<input type="text" placeholder="Name" name="user">
 						<input type="email" placeholder="Email" name="email">
                         <input type="text" placeholder="Web_user" name="web">
-                        <input type="text" id="comment" placeholder="Comment" name="text">                                               
+                        <input type="text" id="comment" placeholder="Comment" name="text">                       
 					</div>
 					<input type="submit" name="enviar"value="GUARDAR" class="btn-submit">
 	 				<input type="hidden" name="popup" value="si" >
